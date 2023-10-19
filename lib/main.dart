@@ -55,10 +55,11 @@ class _TestToastPageState extends State<TestToastPage> {
                 elevation: 0,
               ),
               onPressed: () async {
+                //mocking api call
                 showToast(message: "started");
 
                 await Future.delayed(Duration(seconds: 1));
-                closeToast();
+                closeToast(); // to close previous toast
 
                 showToast(message: "getting there");
 
